@@ -46,3 +46,4 @@ target_link_libraries(CTest myProject)
 target_link_libraries(CTest gtest)
 target_link_libraries(CTest ${GTEST_LIBRARIES} pthread)
 
+enable_testing()
