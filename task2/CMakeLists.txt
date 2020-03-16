@@ -34,8 +34,7 @@ add_executable(C
 add_executable(CTest ${CMAKE_CURRENT_SOURCE_DIR}/A/index.h 
                 ${CMAKE_CURRENT_SOURCE_DIR}/B/lib.h 
                 ${CMAKE_CURRENT_SOURCE_DIR}/A/index.cpp 
-                ${CMAKE_CURRENT_SOURCE_DIR}/B/lib.cpp
-                ${CMAKE_CURRENT_SOURCE_DIR}/C/test.cpp)
+                ${CMAKE_CURRENT_SOURCE_DIR}/B/lib.cpp)
 
 target_link_libraries(C myProject)
 target_link_libraries(CTest myProject)
