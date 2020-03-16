@@ -31,8 +31,7 @@ add_executable(C
                 ${CMAKE_CURRENT_SOURCE_DIR}/B/lib.cpp
                 ${CMAKE_CURRENT_SOURCE_DIR}/C/main.h)
 
-add_executable(CTest ${CMAKE_CURRENT_SOURCE_DIR}/C/main_test.cpp 
-                ${CMAKE_CURRENT_SOURCE_DIR}/A/index.h 
+add_executable(CTest ${CMAKE_CURRENT_SOURCE_DIR}/A/index.h 
                 ${CMAKE_CURRENT_SOURCE_DIR}/B/lib.h 
                 ${CMAKE_CURRENT_SOURCE_DIR}/A/index.cpp 
                 ${CMAKE_CURRENT_SOURCE_DIR}/B/lib.cpp
