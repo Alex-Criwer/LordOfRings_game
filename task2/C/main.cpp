@@ -1,7 +1,7 @@
 #include "main.h"
-#include <iostream>
 
 int myFunction(){
- std::cout << "Hello , user " << "\n";
- return 0;
+ int a = 5;
+ int b = 2;
+ return a + b;
 }
