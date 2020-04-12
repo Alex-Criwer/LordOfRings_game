@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include "magic_creature.h"
-#include "constants.h"
 
 class Elf : public MagicCreature {
 private:

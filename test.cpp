@@ -1,9 +1,12 @@
 #include "realisations/game.h"
-#include "realisations/constants.h"
 #include "realisations/heros.h"
 #include "realisations/villains.h"
 #include <gtest/gtest.h>
 #include <vector>
+const int HEROS_HOBBITS = 20, VILLAINS_HOBBITS = 10, HEROS_ELFS = 5,VILLAINS_ELFS = 3, HEROS_DWARFS = 5, VILLAINS_DWARFS = 10;
+const int HEROS_MAGICIANS = 2, VILLAINS_MAGICIANS = 3, HEROS_NAZGULS = 1,VILLAINS_NAZGULS = 1;
+
+const char FRODO = 'F', SAYRON = 'S';
 
 using namespace std;
 

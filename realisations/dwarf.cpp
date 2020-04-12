@@ -1,4 +1,5 @@
 #include "dwarf.h"
+const int FIELD = 100,  NUMBER_OF_AXES = 10,DWARF_LIVES = 5;
 
 
 Dwarf::Dwarf() {

@@ -1,4 +1,5 @@
 #include "hobbit.h"
+const int HOBBIT_LIVES = 3, FIELD = 100;
 
 Hobbit::Hobbit() {
     lives = HOBBIT_LIVES;

@@ -1,5 +1,5 @@
 #include "nazgul.h"
-
+const int FIELD = 100, NAZGUL_LIVES = 50;
 
 Nazgul::Nazgul() {
     lives = NAZGUL_LIVES;

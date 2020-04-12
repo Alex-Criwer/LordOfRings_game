@@ -4,8 +4,6 @@
 #include "heros.h"
 #include "villains.h"
 
-
-
 class Game{
 public:
     Army* createArmy(ArmyFactory& factory){

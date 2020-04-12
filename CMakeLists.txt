@@ -6,7 +6,7 @@ find_package(GTest REQUIRED)
 
 include_directories(${GTEST_INCLUDE_DIRS})
 
-set(HEADERS realisations/constants.h
+set(HEADERS
         realisations/point.h
         realisations/magic_creature.h
         realisations/hobbit.h

@@ -1,5 +1,7 @@
 #include "magician.h"
 
+const int FIELD = 100, MAGICIAN_LIVES = 20, NUMBER_OF_BONUS_JUST_TO_KILL = 3;
+
 Magician::Magician() {
     lives = MAGICIAN_LIVES;
     coordinatesAtTheMoment.x = rand() % FIELD;

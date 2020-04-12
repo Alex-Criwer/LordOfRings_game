@@ -2,7 +2,6 @@
 
 #include "iostream"
 #include "magic_creature.h"
-#include "constants.h"
 
 
 class Nazgul : public MagicCreature {

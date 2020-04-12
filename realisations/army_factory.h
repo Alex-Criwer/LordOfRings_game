@@ -7,7 +7,7 @@
 #include "magician.h"
 #include "nazgul.h"
 
-using std::vector;
+using namespace std;
 
 
 class ArmyFactory{

@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include "magic_creature.h"
-#include "constants.h"
 
 class Hobbit : public MagicCreature {
     friend bool operator!=(const Hobbit &a, const Hobbit &b);

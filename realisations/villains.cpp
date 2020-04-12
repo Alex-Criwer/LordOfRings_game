@@ -1,5 +1,7 @@
 #include "villains.h"
 
+const int VILLAINS_HOBBITS = 10,VILLAINS_ELFS = 3, VILLAINS_DWARFS = 10, VILLAINS_MAGICIANS = 3,VILLAINS_NAZGULS = 1;
+const int FIELD = 100;
 
 vector<Hobbit *> VillainsArmy::createHobbits() {
     vector<Hobbit *> hobbits;

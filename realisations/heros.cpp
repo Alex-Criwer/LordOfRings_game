@@ -1,5 +1,7 @@
 #include "heros.h"
 
+const int HEROS_HOBBITS = 20, HEROS_ELFS = 5, HEROS_DWARFS = 5, HEROS_MAGICIANS = 2, HEROS_NAZGULS = 1;
+
 vector<Hobbit *> HerosArmy::createHobbits() {
     vector<Hobbit *> hobbits_;
     for (int i = 0; i < HEROS_HOBBITS; ++i) {

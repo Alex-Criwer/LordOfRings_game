@@ -47,39 +47,24 @@ bool operator==(const Army &a, const Army &b) {
         return false;
     }
 
-    vector<Hobbit *> hobbits_a, hobbits_b;
-    for (auto unit : a.hobbits) hobbits_a.push_back(unit);
-    for (auto unit : b.hobbits) hobbits_b.push_back(unit);
-    for (int i = 0; i < hobbits_a.size(); i++) {
-        if ((*hobbits_a[i]) != (*hobbits_b[i])) return false;
+    for (int i = 0; i < a.hobbits.size(); i++) {
+        if ((*a.hobbits[i]) != (*b.hobbits[i])) return false;
     }
 
-    vector<Elf *> elfs_a, elfs_b;
-    for (auto unit : a.elfs) elfs_a.push_back(unit);
-    for (auto unit : b.elfs) elfs_b.push_back(unit);
-    for (int i = 0; i < elfs_a.size(); i++) {
-        if ((*elfs_a[i]) != (*elfs_b[i])) return false;
+    for (int i = 0; i < a.elfs.size(); i++) {
+        if ((*a.elfs[i]) != (*b.elfs[i])) return false;
     }
 
-    vector<Dwarf *> dwarfs_a, dwarfs_b;
-    for (auto unit : a.dwarfs) dwarfs_a.push_back(unit);
-    for (auto unit : b.dwarfs) dwarfs_b.push_back(unit);
-    for (int i = 0; i < dwarfs_a.size(); i++) {
-        if ((*dwarfs_a[i]) != (*dwarfs_b[i])) return false;
+    for (int i = 0; i < a.dwarfs.size(); i++) {
+        if ((*a.dwarfs[i]) != (*b.dwarfs[i])) return false;
     }
 
-    vector<Magician *> magicians_a, magicians_b;
-    for (auto unit : a.magicians) magicians_a.push_back(unit);
-    for (auto unit : b.magicians) magicians_b.push_back(unit);
-    for (int i = 0; i < magicians_a.size(); i++) {
-        if ((*magicians_a[i]) != (*magicians_b[i])) return false;
+    for (int i = 0; i < a.magicians.size(); i++) {
+        if ((*a.magicians[i]) != (*b.magicians[i])) return false;
     }
 
-    vector<Nazgul *> nazguls_a, nazguls_b;
-    for (auto unit : a.nazguls) nazguls_a.push_back(unit);
-    for (auto unit : b.nazguls) nazguls_b.push_back(unit);
-    for (int i = 0; i < nazguls_a.size(); i++) {
-        if ((*nazguls_a[i]) != (*nazguls_b[i])) return false;
+    for (int i = 0; i < a.nazguls.size(); i++) {
+        if ((*a.nazguls[i]) != (*b.nazguls[i])) return false;
     }
 
     return true;
