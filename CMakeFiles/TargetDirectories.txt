@@ -1,5 +1,0 @@
-/home/alex-criwer/CLionProjects/game/CMakeFiles/rebuild_cache.dir
-/home/alex-criwer/CLionProjects/game/CMakeFiles/edit_cache.dir
-/home/alex-criwer/CLionProjects/game/CMakeFiles/test.dir
-/home/alex-criwer/CLionProjects/game/CMakeFiles/game.dir
-/home/alex-criwer/CLionProjects/game/CMakeFiles/Test.dir

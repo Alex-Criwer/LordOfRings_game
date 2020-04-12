@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/game.dir/main.cpp.o CMakeFiles/game.dir/realisations/hobbit.cpp.o  -o game 
