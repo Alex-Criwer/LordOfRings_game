@@ -3,9 +3,10 @@
 #include <iostream>
 #include "magic_creature.h"
 
-const int HOBBIT_LIVES = 3;
 
 class Hobbit : public MagicCreature {
+    int HOBBIT_LIVES = 3;
+
     friend bool operator!=(const Hobbit &a, const Hobbit &b);
 
 public:

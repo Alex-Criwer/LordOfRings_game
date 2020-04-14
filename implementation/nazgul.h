@@ -3,9 +3,9 @@
 #include "iostream"
 #include "magic_creature.h"
 
-const int NAZGUL_LIVES = 50;
-
 class Nazgul : public MagicCreature {
+    int NAZGUL_LIVES = 50;
+
     friend bool operator!=(const Nazgul &a, const Nazgul &b);
 
 public:

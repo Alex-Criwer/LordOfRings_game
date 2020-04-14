@@ -2,10 +2,9 @@
 
 #include "point.h"
 
-const int  FIELD = 100;
-
 class MagicCreature {
 public:
+    static const int FIELD = 100;
     int lives;
     Point coordinatesAtTheMoment;
 

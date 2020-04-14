@@ -4,10 +4,10 @@
 #include "heros.h"
 #include "villains.h"
 
-class Game{
+class Game {
 public:
-    Army* createArmy(ArmyFactory& factory){
-        Army* newArmy = new Army();
+    Army *createArmy(ArmyFactory &factory) {
+        Army *newArmy = new Army();
         newArmy->addHobbits(factory.createHobbits());
         newArmy->addElfs(factory.createElfs());
         newArmy->addDwarfs(factory.createDwarfs());
