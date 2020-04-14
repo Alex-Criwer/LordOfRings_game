@@ -4,7 +4,7 @@
 #include "magic_creature.h"
 
 class Nazgul : public MagicCreature {
-    int NAZGUL_LIVES = 50;
+    static const int NAZGUL_LIVES = 50;
 
     friend bool operator!=(const Nazgul &a, const Nazgul &b);
 

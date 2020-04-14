@@ -5,7 +5,7 @@
 
 
 class Hobbit : public MagicCreature {
-    int HOBBIT_LIVES = 3;
+    static const int HOBBIT_LIVES = 3;
 
     friend bool operator!=(const Hobbit &a, const Hobbit &b);
 

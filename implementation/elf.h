@@ -6,7 +6,7 @@
 
 class Elf : public MagicCreature {
 private:
-    int ELF_LIVES = 10, NUMBER_OF_ARROWS = 10;
+    const int ELF_LIVES = 10, NUMBER_OF_ARROWS = 10;
 
     friend bool operator!=(const Elf &a, const Elf &b);
 

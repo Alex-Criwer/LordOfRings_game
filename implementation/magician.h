@@ -5,7 +5,7 @@
 
 class Magician : public MagicCreature {
 private:
-    int MAGICIAN_LIVES = 20, NUMBER_OF_BONUS_JUST_TO_KILL = 3;
+    static const int MAGICIAN_LIVES = 20, NUMBER_OF_BONUS_JUST_TO_KILL = 3;
 
     friend bool operator!=(const Magician &a, const Magician &b);
 
