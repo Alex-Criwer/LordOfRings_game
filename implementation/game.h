@@ -6,13 +6,16 @@
 
 class Game {
 public:
+    Army *newArmy = new Army();
     Army *createArmy(ArmyFactory &factory) {
-        Army *newArmy = new Army();
         newArmy->addHobbits(factory.createHobbits());
         newArmy->addElfs(factory.createElfs());
         newArmy->addDwarfs(factory.createDwarfs());
         newArmy->addMagicians(factory.createMagicians());
         newArmy->addNazguls(factory.createNazguls());
         return newArmy;
+    }
+    ~Game(){
+        delete newArmy;
     }
 };

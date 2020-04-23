@@ -6,9 +6,9 @@
 
 static const char FRODO = 'F', SAYRON = 'S';
 
-Army* hand_create(const char whoseArmy){
-    if(whoseArmy == 'F') {
-        Army *test = new Army();
+Army *hand_create(const char whoseArmy) {
+    Army *test = new Army();
+    if (whoseArmy == 'F') {
         std::vector<Hobbit *> hobbits;
         for (int i = 0; i < HerosArmy::HEROS_HOBBITS; i++) {
             hobbits.push_back(new Hobbit());
@@ -38,8 +38,6 @@ Army* hand_create(const char whoseArmy){
         test->addNazguls(nazguls);
         return test;
     } else {
-
-        Army *test = new Army();
         std::vector<Hobbit *> hobbits;
         for (int i = 0; i < VillainsArmy::VILLAINS_HOBBITS; i++) {
             hobbits.push_back(new Hobbit());
@@ -69,30 +67,31 @@ Army* hand_create(const char whoseArmy){
         test->addNazguls(nazguls);
         return test;
     }
+
 }
 
-::testing::AssertionResult IsEqual(Army* a, Army* b)
-{
+::testing::AssertionResult IsEqual(Army *a, Army *b) {
     if ((*a) == (*b)) {
         return ::testing::AssertionSuccess();
-    }
-    else {
+    } else {
         return ::testing::AssertionFailure();
     }
 }
 
-TEST(CREATING_ARMY, FA)
-{
+TEST(CREATING_ARMY, FA) {
     Game game;
     HerosArmy Frodo_factory;
-    EXPECT_TRUE(IsEqual(game.createArmy(Frodo_factory), hand_create(FRODO)));
+    Army *testArmy = hand_create(FRODO);
+    EXPECT_TRUE(IsEqual(game.createArmy(Frodo_factory), testArmy));
+    delete testArmy;
 }
 
-TEST(CREATING_ARMY, SA)
-{
+TEST(CREATING_ARMY, SA) {
     Game game;
     VillainsArmy Sayrons_factory;
-    EXPECT_TRUE(IsEqual(game.createArmy(Sayrons_factory), hand_create(SAYRON)));
+    Army *testArmy = hand_create(SAYRON);
+    EXPECT_TRUE(IsEqual(game.createArmy(Sayrons_factory), testArmy));
+    delete testArmy;
 }
 
 int main(int argc, char **argv) {

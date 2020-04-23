@@ -1,37 +1,52 @@
 #include "army.h"
 
 
-void Army::addHobbits(std::vector<Hobbit *> armyOfHobbits) {
+void Army::addHobbits(const std::vector<Hobbit *> & armyOfHobbits) {
     for (auto hobbit : armyOfHobbits) {
         hobbits.push_back(hobbit);
     }
 }
 
-void Army::addElfs(std::vector<Elf *> armyOfElfs) {
+void Army::addElfs(const std::vector<Elf *>& armyOfElfs) {
     for (auto elf : armyOfElfs) {
         elfs.push_back(elf);
     }
 }
 
-void Army::addDwarfs(std::vector<Dwarf *> armyOfDwarfs) {
+void Army::addDwarfs(const std::vector<Dwarf *>& armyOfDwarfs) {
     for (auto dwarf : armyOfDwarfs) {
         dwarfs.push_back(dwarf);
     }
 }
 
-void Army::addMagicians(std::vector<Magician *> armyOfMagicians) {
+void Army::addMagicians(const std::vector<Magician *>& armyOfMagicians) {
     for (auto magician : armyOfMagicians) {
         magicians.push_back(magician);
     }
 }
 
-void Army::addNazguls(std::vector<Nazgul *> armyOfNazguls) {
+void Army::addNazguls(const std::vector<Nazgul *>& armyOfNazguls) {
     for (auto nazgul : armyOfNazguls) {
         nazguls.push_back(nazgul);
     }
 }
 
 Army::~Army() {
+    for(auto x : hobbits){
+        delete x;
+    }
+    for(auto x : elfs){
+        delete x;
+    }
+    for(auto x : dwarfs){
+        delete x;
+    }
+    for(auto x : magicians){
+        delete x;
+    }
+    for(auto x : nazguls){
+        delete x;
+    }
     hobbits.clear();
     elfs.clear();
     dwarfs.clear();

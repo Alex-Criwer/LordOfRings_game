@@ -20,15 +20,15 @@ private:
     friend bool operator==(const Army &a, const Army &b);
 
 public:
-    void addHobbits(std::vector<Hobbit *> armyOfHobbits);
+    void addHobbits(const std::vector<Hobbit *>& armyOfHobbits);
 
-    void addElfs(std::vector<Elf *> armyOfElfs);
+    void addElfs(const std::vector<Elf *>& armyOfElfs);
 
-    void addDwarfs(std::vector<Dwarf *> armyOfDwarfs);
+    void addDwarfs(const std::vector<Dwarf *>& armyOfDwarfs);
 
-    void addMagicians(std::vector<Magician *> armyOfMagicians);
+    void addMagicians(const std::vector<Magician *>& armyOfMagicians);
 
-    void addNazguls(std::vector<Nazgul *> armyOfNazguls);
+    void addNazguls(const std::vector<Nazgul *>& armyOfNazguls);
 
     ~Army();
 };
