@@ -18,6 +18,12 @@ set(HEADERS
         implementation/army_factory.h
         implementation/heros.h
         implementation/villains.h
+        implementation/Adapter_Traitors.h
+        implementation/decorator_magic_creature.h
+        implementation/decorator_dwarf.h
+        implementation/decorator_elf.h
+        implementation/decorator_hobbit.h
+        implementation/detachment.h
         )
 
 set(SOURCES
@@ -29,6 +35,12 @@ set(SOURCES
         implementation/nazgul.cpp
         implementation/heros.cpp
         implementation/villains.cpp
+        implementation/Adapter_Traitors.cpp
+        implementation/decorator_magic_creature.cpp
+        implementation/decorator_dwarf.cpp
+        implementation/decorator_elf.cpp
+        implementation/decorator_hobbit.cpp
+        implementation/detachment.cpp
         )
 
 add_executable(game main.cpp  ${HEADERS} ${SOURCES})

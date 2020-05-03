@@ -1,6 +1,9 @@
 #include "implementation/game.h"
 #include "implementation/heros.h"
 #include "implementation/villains.h"
+#include "implementation/detachment.h"
+#include "implementation/Adapter_Traitors.h"
+#include "implementation/decorator_hobbit.h"
 #include <gtest/gtest.h>
 #include <vector>
 
@@ -67,7 +70,6 @@ Army *hand_create(const char whoseArmy) {
         test->addNazguls(nazguls);
         return test;
     }
-
 }
 
 ::testing::AssertionResult IsEqual(Army *a, Army *b) {
@@ -93,6 +95,26 @@ TEST(CREATING_ARMY, SA) {
     EXPECT_TRUE(IsEqual(game.createArmy(Sayrons_factory), testArmy));
     delete testArmy;
 }
+
+TEST(WHO_WINS, SOMEONE_WINS) {
+    Game myGamehero, myGamevillains;
+    HerosArmy FrodosArmy;
+    Army *heros = myGamehero.createArmy(FrodosArmy);
+    std::cout << "heros are created" << std::endl;
+    VillainsArmy SayronsArmy;
+    Army *villains = myGamevillains.createArmy(SayronsArmy);
+    std::cout << "villains are created" << std::endl << "we have done them" << "\n";
+    Traitor traitor(heros, villains, "hobbit", 5);
+    std::cout << "now lets make a super hobbit" << '\n';
+    MagicCreature *hobbit = new Hobbit;
+    MagicCreature *decorator = new DecoratorHobbit(hobbit);
+    std::cout << "lets make detachment" << '\n';
+    Detachment herosDetachment(heros, 5,5,5,5,5);
+    herosDetachment.makeSuperDetachment();
+    delete hobbit;
+    delete decorator;
+}
+
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);

@@ -3,6 +3,11 @@
 #include "army.h"
 #include "heros.h"
 #include "villains.h"
+#include "Adapter_Traitors.h"
+#include "decorator_elf.h"
+#include "decorator_dwarf.h"
+#include "decorator_hobbit.h"
+#include "detachment.h"
 
 class Game {
 public:

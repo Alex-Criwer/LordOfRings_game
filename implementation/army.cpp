@@ -55,6 +55,28 @@ Army::~Army() {
 }
 
 
+
+std::vector<Hobbit *>* getVectorOfHobbits(Army* myArmy) {
+    return &(myArmy->hobbits);
+}
+
+std::vector<Elf *>* getVectorOfElfs(Army* myArmy){
+    return &(myArmy->elfs);
+}
+
+std::vector<Dwarf *>* getVectorOfDwarfs(Army* myArmy){
+    return &(myArmy->dwarfs);
+}
+
+std::vector<Magician *>* getVectorOfMagicians(Army* myArmy){
+    return &(myArmy->magicians);
+}
+
+std::vector<Nazgul *>* getVectorOfNazguls(Army* myArmy){
+    return &(myArmy->nazguls);
+}
+
+
 bool operator==(const Army &a, const Army &b) {
     if (a.hobbits.size() != b.hobbits.size() || a.elfs.size() != b.elfs.size() ||
         a.dwarfs.size() != b.dwarfs.size() || a.magicians.size() != b.magicians.size()
@@ -84,5 +106,6 @@ bool operator==(const Army &a, const Army &b) {
 
     return true;
 }
+
 
 

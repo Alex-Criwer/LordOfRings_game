@@ -30,7 +30,15 @@ public:
 
     void addNazguls(const std::vector<Nazgul *>& armyOfNazguls);
 
+    friend std::vector<Hobbit *> * getVectorOfHobbits(Army* myArmy);
+
+    friend std::vector<Elf *>* getVectorOfElfs(Army* myArmy);
+
+    friend std::vector<Dwarf *>* getVectorOfDwarfs(Army* myArmy);
+
+    friend std::vector<Magician *>* getVectorOfMagicians(Army* myArmy);
+
+    friend std::vector<Nazgul *>* getVectorOfNazguls(Army* myArmy);
+
     ~Army();
 };
-
-

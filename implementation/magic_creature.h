@@ -7,6 +7,7 @@ public:
     static const int FIELD = 100;
     int lives;
     Point coordinatesAtTheMoment;
+    bool abilityToFlyOnGriffins = false;
 
     virtual void go(int x, int y) = 0;
 
@@ -14,3 +15,4 @@ public:
 
     virtual MagicCreature *clone() = 0;
 };
+

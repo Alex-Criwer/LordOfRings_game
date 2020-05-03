@@ -7,7 +7,8 @@ Nazgul::Nazgul() {
 }
 
 void Nazgul::go(int x, int y) {
-
+    this->coordinatesAtTheMoment.x = x;
+    this->coordinatesAtTheMoment.y = y;
 }
 
 void Nazgul::shoot(int whereX, int whereY) const {

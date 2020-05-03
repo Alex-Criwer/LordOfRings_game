@@ -8,7 +8,8 @@ Magician::Magician() {
 }
 
 void Magician::go(int x, int y) {
-
+    this->coordinatesAtTheMoment.x = x;
+    this->coordinatesAtTheMoment.y = y;
 }
 
 void Magician::shoot(int whereX, int whereY) const {

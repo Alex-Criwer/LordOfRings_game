@@ -8,7 +8,8 @@ Dwarf::Dwarf() {
 }
 
 void Dwarf::go(int x, int y) {
-
+    this->coordinatesAtTheMoment.x = x;
+    this->coordinatesAtTheMoment.y = y;
 }
 
 void Dwarf::shoot(int whereX, int whereY) const {

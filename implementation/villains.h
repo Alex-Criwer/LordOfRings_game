@@ -4,7 +4,7 @@
 
 class VillainsArmy : public ArmyFactory {
 public:
-    static const int VILLAINS_HOBBITS = 10, VILLAINS_ELFS = 3, VILLAINS_DWARFS = 10, VILLAINS_MAGICIANS = 3, VILLAINS_NAZGULS = 1;
+    static const int VILLAINS_HOBBITS = 1700, VILLAINS_ELFS = 150, VILLAINS_DWARFS = 700, VILLAINS_MAGICIANS = 70, VILLAINS_NAZGULS = 90;
 
     std::vector<Hobbit *> createHobbits() override;
 

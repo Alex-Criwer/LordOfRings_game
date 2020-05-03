@@ -7,7 +7,8 @@ Hobbit::Hobbit() {
 }
 
 void Hobbit::go(int x, int y) {
-
+    this->coordinatesAtTheMoment.x = x;
+    this->coordinatesAtTheMoment.y = y;
 }
 
 void Hobbit::shoot(int whereX, int whereY) const {

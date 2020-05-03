@@ -8,7 +8,8 @@ Elf::Elf() {
 }
 
 void Elf::go(int x, int y) {
-
+    this->coordinatesAtTheMoment.x = x;
+    this->coordinatesAtTheMoment.y = y;
 }
 
 void Elf::shoot(int whereX, int whereY) const {
