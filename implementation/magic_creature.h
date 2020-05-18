@@ -1,6 +1,7 @@
 #pragma once
 
 #include "point.h"
+#include "visitor.h"
 
 class MagicCreature {
 public:

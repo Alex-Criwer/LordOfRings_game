@@ -28,3 +28,7 @@ Elf *Elf::clone() {
 bool operator!=(const Elf &a, const Elf &b) {
     return a.lives != b.lives || a.arrows != b.arrows;
 }
+
+void Elf::Accept(Visitor *visitor) const {
+    visitor->visitorForElf(this);
+}

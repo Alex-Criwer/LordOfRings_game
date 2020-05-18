@@ -20,4 +20,7 @@ public:
     void hackAnotherCreature(int whereX, int whereY);
 
     Dwarf *clone();
+
+    void Accept(Visitor *visitor) const;
+
 };

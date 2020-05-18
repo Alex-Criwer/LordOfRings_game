@@ -8,6 +8,10 @@
 #include "decorator_dwarf.h"
 #include "decorator_hobbit.h"
 #include "detachment.h"
+#include "JarvisAlgorithm.h"
+#include "AndrewAlgorithm.h"
+#include "context.h"
+#include "visitor.h"
 
 class Game {
 public:

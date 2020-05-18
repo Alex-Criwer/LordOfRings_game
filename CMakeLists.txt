@@ -24,6 +24,11 @@ set(HEADERS
         implementation/decorator_elf.h
         implementation/decorator_hobbit.h
         implementation/detachment.h
+        implementation/stragedy.h
+        implementation/AndrewAlgorithm.h
+        implementation/JarvisAlgorithm.h
+        implementation/context.h
+        implementation/visitor.h
         )
 
 set(SOURCES
@@ -41,9 +46,13 @@ set(SOURCES
         implementation/decorator_elf.cpp
         implementation/decorator_hobbit.cpp
         implementation/detachment.cpp
+        implementation/AndrewAlgorithm.cpp
+        implementation/context.cpp
+        implementation/JarvisAlgorithm.h.cpp
+        implementation/visitor.cpp
         )
 
-add_executable(game main.cpp  ${HEADERS} ${SOURCES})
+add_executable(game main.cpp  ${HEADERS} ${SOURCES} )
 add_executable(Test test.cpp ${HEADERS} ${SOURCES})
 target_link_libraries(Test ${GTEST_LIBRARIES} pthread)
 

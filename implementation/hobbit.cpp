@@ -22,3 +22,7 @@ Hobbit *Hobbit::clone() {
 bool operator!=(const Hobbit &a, const Hobbit &b) {
     return a.lives != b.lives;
 }
+
+void Hobbit::Accept(Visitor *visitor) const {
+    visitor->visitorForHobbit(this);
+}

@@ -4,6 +4,7 @@
 #include "implementation/detachment.h"
 #include "implementation/Adapter_Traitors.h"
 #include "implementation/decorator_hobbit.h"
+#include "implementation/context.h"
 #include <gtest/gtest.h>
 #include <vector>
 

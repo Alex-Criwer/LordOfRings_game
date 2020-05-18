@@ -1,7 +1,9 @@
 #pragma once
 
+#include "cmath"
+
 class Point {
 public:
-    int x;
-    int y;
+    long long x;
+    long long y;
 };
