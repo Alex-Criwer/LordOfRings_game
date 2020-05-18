@@ -117,6 +117,37 @@ TEST(WHO_WINS, SOMEONE_WINS) {
 }
 
 
+TEST(CONVEX_HULL, points){
+    {
+        std::vector<Point> coordinatesOfEnemy{Point{0, 0}, Point{0, 2}, Point{2, 0}, Point{1, 1}, Point{2, 2}};
+        Context *myContext = new Context(new StrategyAndrew(coordinatesOfEnemy.size(), coordinatesOfEnemy));
+        myContext->makeAnEnemyBypassMap();
+        ASSERT_EQ(myContext->getStrategy()->getMap()[0].x, 0);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[0].y, 0);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[1].x, 0);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[1].y, 2);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[2].x, 2);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[2].y, 2);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[3].x, 2);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[3].y, 0);
+        delete myContext;
+    }
+    {
+        std::vector<Point> coordinatesOfEnemy{Point{7,8}, Point{16,1}, Point{0,0}, Point{15,7}, Point{4,4}, Point {3,3}};
+        Context *myContext = new Context(new StrategyAndrew(coordinatesOfEnemy.size(), coordinatesOfEnemy));
+        myContext->makeAnEnemyBypassMap();
+        ASSERT_EQ(myContext->getStrategy()->getMap()[0].x, 0);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[0].y, 0);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[1].x, 7);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[1].y, 8);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[2].x, 15);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[2].y, 7);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[3].x, 16);
+        ASSERT_EQ(myContext->getStrategy()->getMap()[3].y, 1);
+        delete myContext;
+    }
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
