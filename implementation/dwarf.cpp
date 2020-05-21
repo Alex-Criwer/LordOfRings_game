@@ -27,3 +27,7 @@ Dwarf *Dwarf::clone() {
 bool operator!=(const Dwarf &a, const Dwarf &b) {
     return a.lives != b.lives || a.axes != b.axes;
 }
+
+void Dwarf::Accept(Visitor *visitor) const {
+    visitor->visitorForDwarf(this);
+}

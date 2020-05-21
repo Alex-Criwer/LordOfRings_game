@@ -22,4 +22,6 @@ public:
 
     Elf *clone();
 
+    void Accept(Visitor *visitor) const;
+
 };

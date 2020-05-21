@@ -17,4 +17,6 @@ public:
     void shoot(int whereX, int whereY) const;
 
     Hobbit *clone();
+
+    void Accept(Visitor *visitor) const;
 };

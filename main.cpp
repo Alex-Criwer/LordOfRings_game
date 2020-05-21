@@ -36,6 +36,44 @@ int main() {
     herosDetachment.makeSuperDetachment();
     std::cout << "the number of characters in new detachment is " << getVectorOfCreatures(&herosDetachment)->size() << '\n';
 
+
+
+    std::cout << '\n' << "the coordinates of the location of the enemy’s bases fell into our hands, now we can build a minimum area to capture them" << '\n';
+    int numberOfCoordinates;
+    std::cout << "how many enemy locations do we have? Enter it" << "\n";
+    std::cin >> numberOfCoordinates;
+    std::vector<Point> coordinatesOfEnemy;
+    coordinatesOfEnemy.reserve(numberOfCoordinates);
+    std::cout << "enter the coordinates" << '\n';
+    for (int i = 0; i < numberOfCoordinates; ++i) {
+        int x,y;
+        std::cin >> x >> y;
+        coordinatesOfEnemy.push_back(Point{x,y});
+    }
+    std::cout << "Is there a lot of dots of location in the middle ? enter yes or no" << "\n";
+    std::string str;
+    std::cin >> str;
+    Context* myContext;
+    if(str == "yes"){
+        myContext = new Context(new StrategyJarvis(numberOfCoordinates, coordinatesOfEnemy));
+    } else if(str == "no"){
+        myContext = new Context(new StrategyAndrew(numberOfCoordinates, coordinatesOfEnemy));
+    }
+    myContext->makeAnEnemyBypassMap();
+    if(str == "no") {
+        for (auto point : myContext->getStrategy()->getMap()) {
+            std::cout << point.x << " " << point.y << '\n';
+        }
+    }
+
+    Visitor* visitor = new Visitor;
+    Hobbit* myHobbit = new Hobbit;
+    myHobbit->Accept(visitor);
+
+    coordinatesOfEnemy.clear();
+    delete myContext;
+    delete visitor;
+    delete myHobbit;
     delete hobbit;
     delete decorator;
     return 0;
